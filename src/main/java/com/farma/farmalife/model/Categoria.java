@@ -16,13 +16,13 @@ public class Categoria {
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long id;
 		
-		@NotBlank(message = "Não é possível prosseguir sem adicionar o tipo do produto!")
-		@Size(min = 5, max = 100, message = "Você deve digitar noo mínimo 5 caracteres!")
-		private String tipo;
+		@NotBlank(message = "Não é possível prosseguir sem adicionar o nome da categoria!")
+		@Size(min = 5, max = 100, message = "A categoria deve conter no mínimo 5 caracteres!")
+		private String nome;
 		
-		@NotBlank(message = "A adição do nome da marca do produto é obrigatória!")
-		@Size(min = 3, max = 100, message = "O nome da marca deve conter no mínimo 3 caracteres!")
-		private String marca;
+		@NotBlank(message = "A adição da descrição da categoria é obrigatória!")
+		@Size(min = 5, max = 100, message = "A descrição conter no mínimo 5 caracteres!")
+		private String descricao;
 
 		public Long getId() {
 			return id;
@@ -31,22 +31,22 @@ public class Categoria {
 		public void setId(Long id) {
 			this.id = id;
 		}
-
-		public String getTipo() {
-			return tipo;
-		}
-
-		public void setTipo(String tipo) {
-			this.tipo = tipo;
-		}
-
-		public String getMarca() {
-			return marca;
-		}
-
-		public void setMarca(String marca) {
-			this.marca = marca;
-		}
 		
+		public String getNome() {
+			return nome;
+		}
+
+		public void setNome(String nome) {
+			this.nome = nome;
+		}
+
+		public String getDescricao() {
+			return descricao;
+		}
+
+		public void setDescricao(String descricao) {
+			this.descricao = descricao;
+		}
+
 		
 }
